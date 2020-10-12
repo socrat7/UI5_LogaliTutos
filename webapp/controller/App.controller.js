@@ -1,9 +1,10 @@
 sap.ui.define( [
 		
 		"sap/ui/core/mvc/Controller", //asignamos el controller
-		"sap/m/MessageBox" 
+		"sap/m/MessageBox",
+		"sap/m/MessageToast"
 	],
-	function(Controller, MessageBox) {
+	function(Controller, MessageBox, MessageToast) {
 		
 		"use strict"; //se especifica que es la zona privada del controlador
 		
@@ -15,13 +16,15 @@ sap.ui.define( [
 		//llamamos a la funcion .onShowHello asignada al boton de la vista App
 		onShowHello: function(){
 				MessageBox.show(
-									   "Hallo", {
+									   "Hallo World", {
 										icon: MessageBox.Icon.SUCCESS,
 										title: "Mensaje",
 										actions: [MessageBox.Action.OK],
 										emphasizedAction: MessageBox.Action.OK,
 									}
 								);
+								
+			    MessageToast.show("Hallo World");
 			}
 			
 		});
