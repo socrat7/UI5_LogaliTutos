@@ -1,14 +1,18 @@
-/**
- * 
- */
-
 sap.ui.define( [
-		"sap/m/Text"
+	
+		"sap/ui/core/mvc/XMLView" //incuimos la vista en xml, siempre es lo mismo
+
 	],
-	function(Text) {
+	function(XMLView) {
 		
-		new Text({
-			text: "Hello World"
-		}).placeAt("content");
-		
+		XMLView.create({
+			
+			//insertamos las propiedades
+			viewName : "sapui5.view.App" // el namespace
+			
+		}).then( function (oView){
+			
+			oView.placeAt("content");
+		});
+
 	});
