@@ -8,11 +8,13 @@
 			data-sap-ui-theme="sap_belize_plus"
 			data-sap-ui-resourceroots='{"sapui5": "./"}'
 			data-sap-ui-compatVersion="edge"
-			data-sap-ui-oninit="module:sapui5/index"
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
 			data-sap-ui-async="true"
 			data-sap-ui-frameOptions="trusted">
 		</script>
 	</head>
 	<body  class="sapUiBody" id="content">
+		<!-- con la siguiente linea podemos eliminar el index.js -->
+		<div data-sap-ui-component data-name="sapui5" data-id="container" data-settings='{"id" : "sapui5"}'></div>
 	</body>
 </html>
