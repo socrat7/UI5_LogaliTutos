@@ -3,9 +3,9 @@ sap.ui.define([
 		"sap/ui/core/mvc/Controller", //asignamos el controller
 		"sap/m/MessageBox",
 		"sap/m/MessageToast",
-		"sap/ui/model/json/JSONModel" //Agregaremos datos estaticos con el formato JSON
+		"sapui5/model/models" //Accedemos el model.js definido en la carpeta model
 	],
-	function (Controller, MessageBox, MessageToast, JSONModel) {
+	function (Controller, MessageBox, MessageToast, models) {
 
 		"use strict"; //se especifica que es la zona privada del controlador
 
@@ -16,23 +16,10 @@ sap.ui.define([
 			//el método onInit se inicia siempre al instanciar
 			onInit: function () {
 
-				//creamos datos para luego agregarlos a la vista
-				//set model on view
-				var oData = {
-					//creamos un formato json
-					recipient: {
-						name: "Word"
-					}
-				};
-
-				//cargamos los datos en el modelo
-				var oModel = new JSONModel(oData);
-
 				//cargamos el modelo en la vista
-				this.getView().setModel(oModel);
-
+				this.getView().setModel(models.createRecipient());
+				//createRecipient() está definido en models.js
 			},
-
 			//llamamos a la funcion .onShowHello asignada al boton de la vista App
 			onShowHello: function () {
 				MessageBox.show(
