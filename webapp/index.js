@@ -1,18 +1,18 @@
-sap.ui.define( [
-	
-		"sap/ui/core/mvc/XMLView" //incuimos la vista en xml, siempre es lo mismo
+sap.ui.define([
+
+		"sap/ui/core/ComponentContainer"
 
 	],
-	function(XMLView) {
-		
-		XMLView.create({
-			
-			//insertamos las propiedades
-			viewName : "sapui5.view.App" // el namespace
-			
-		}).then( function (oView){
-			
-			oView.placeAt("content");
-		});
+	function (ComponentContainer) {
 
+		new ComponentContainer({
+
+			//indicamos que componente queremos instanciar
+			name: "sapui5",
+			settings: {
+				id: "sapui5"
+			},
+			async: true
+
+		}).placeAt("content");
 	});

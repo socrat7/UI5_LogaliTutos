@@ -2,11 +2,14 @@ sap.ui.define([
 
 		"sap/ui/core/mvc/Controller", //asignamos el controller
 		"sap/m/MessageBox",
-		"sap/m/MessageToast",
+		"sap/m/MessageToast"
+		
+		/* Toso esto se ha pasado al Component.js
 		"sapui5/model/models", //Accedemos el model.js definido en la carpeta model
 		"sap/ui/model/resource/ResourceModel" // para agregar los datos del i18n
+		*/
 	],
-	function (Controller, MessageBox, MessageToast, models, ResourceModel) {
+	function (Controller, MessageBox, MessageToast ) { //se paso al Component.js: models, ResourceModel
 
 		"use strict"; //se especifica que es la zona privada del controlador
 
@@ -16,7 +19,9 @@ sap.ui.define([
 
 			//el método onInit se inicia siempre al instanciar
 			onInit: function () {
-
+				
+				/* Toso esto se ha pasado al Component.js
+				
 				//cargamos el modelo en la vista
 				this.getView().setModel(models.createRecipient());
 				//createRecipient() está definido en models.js
@@ -28,6 +33,8 @@ sap.ui.define([
 
 				//cargamos los datos en el modelo
 				this.getView().setModel(i18nModel, "i18n"); // con ésto ya podemos utilizar en i18n en la vista
+				
+				*/
 
 			},
 			//llamamos a la funcion .onShowHello asignada al boton de la vista App
