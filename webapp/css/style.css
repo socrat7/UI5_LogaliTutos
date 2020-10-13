@@ -1,0 +1,20 @@
+.myCustomCss .myCustomText {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.myCustomCss .myCustomButton {
+    background-color: #3f5161;
+    color: white;
+    text-align: center;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    margin: 4px 2px;
+}
+
+.myCustomCss .myCustomButton:hover {
+    opacity: 1;
+    background-color: black;
+}
