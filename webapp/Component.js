@@ -6,21 +6,14 @@ sap.ui.define([
 
 ], function (UIComponent, models, ResourceModel) {
 
-	return UIComponent.extend("sapui5.Component.js", {
+	return UIComponent.extend("sapui5.Component", {
 
 		//incluimos metadatos
 		metadata: {
-			//indicamos cual es la vista principal
-			rootView: {
-				//insertamos las propiedades
-				"viewName": "sapui5.view.App", // el namespace
-				//especificamos que se trata de ua vista xml
-				"type": "XML",
-				//cual es la forma de cargar la ino, async
-				"async": true,
-				//el ID de la vista
-				"id": "app"
-			}
+
+			//todos los metadatas seran dirigidos en el manifest.json
+			manifest: "json"
+
 		},
 
 		//funcion init
