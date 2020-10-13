@@ -20,28 +20,38 @@ sap.ui.define([
 				//cargamos el modelo en la vista
 				this.getView().setModel(models.createRecipient());
 				//createRecipient() está definido en models.js
-				
+
 				//set i18n model on view
 				var i18nModel = new ResourceModel({
 					bundleName: "sapui5.i18n.i18n" //la ruta es sapui5 en este caso
 				});
-				
+
 				//cargamos los datos en el modelo
-				this.getView().setModel(i18nModel, "i18n" ); // con ésto ya podemos utilizar en i18n en la vista
-				
+				this.getView().setModel(i18nModel, "i18n"); // con ésto ya podemos utilizar en i18n en la vista
+
 			},
 			//llamamos a la funcion .onShowHello asignada al boton de la vista App
 			onShowHello: function () {
+
+				//Read the Text from i18n file
+				var sHello = this.getView().getModel("i18n").getResourceBundle().getText("sayHello"); //getResourceBundle() retorna el contenido del i18n
+
+				//read the Text from the model
+				var sName = this.getView().getModel().getProperty("/recipient/name");
+
+				//concatenamos ambas variables
+				var sMsg = sHello.concat(" ").concat(sName);
+
 				MessageBox.show(
-					"Hallo Word", {
+					sMsg, {
 						icon: MessageBox.Icon.SUCCESS,
 						title: "Mensaje",
 						actions: [MessageBox.Action.OK],
-						emphasizedAction: MessageBox.Action.OK,
+						emphasizedAction: MessageBox.Action.OK
 					}
 				);
 
-				MessageToast.show("Hallo World");
+				MessageToast.show(sMsg);
 			}
 
 		});
