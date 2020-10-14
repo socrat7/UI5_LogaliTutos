@@ -2,9 +2,10 @@ sap.ui.define([
 
 	"sap/ui/core/UIComponent",
 	"sapui5/model/models", //Accedemos el model.js definido en la carpeta model
-	"sap/ui/model/resource/ResourceModel" // para agregar los datos del i18n
+	"sap/ui/model/resource/ResourceModel", // para agregar los datos del i18n
+	"sapui5/controller/HelloDialog"
 
-], function (UIComponent, models, ResourceModel) {
+], function (UIComponent, models, ResourceModel, HelloDialog) {
 
 	return UIComponent.extend("sapui5.Component", {
 
@@ -13,7 +14,6 @@ sap.ui.define([
 
 			//todos los metadatas seran dirigidos en el manifest.json
 			manifest: "json"
-
 		},
 
 		//funcion init
@@ -35,6 +35,19 @@ sap.ui.define([
 			//cargamos los datos en el modelo
 			this.setModel(i18nModel, "i18n"); // con ésto ya podemos utilizar en i18n en la vista
 
+			//cargamos el controlador para el mensaje de dialogo
+			//accedemos a la logica de HelloDialog.js
+			this._helloDialog = new HelloDialog(this.getRootControl());
+
+		},
+
+		exit: function () { //eliminamos el mensaje de dialogo
+			this._helloDialog.destroy();
+			delete this._helloDialog;
+		},
+		
+		openHelloDialog: function(){
+				this._helloDialog.open();
 		}
 
 	});

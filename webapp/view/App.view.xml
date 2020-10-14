@@ -3,12 +3,12 @@
 		<App class="myCustomCss">
 			<pages>
 				<Page title="{i18n>homePageTitle}">
+					<headerContent>
+						<Button id="helloDialogHeader" icon="sap-icon://globe" press=".onOpenDialog" class="sapUiSmallMargin "/>
+					</headerContent>
 					<content>
-						
-						<mvc:XMLView viewName="sapui5.view.HelloPanel" />
-						
-						<core:Fragment fragmentName="sapui5.view.Form01" type="XML" />
-						
+						<mvc:XMLView viewName="sapui5.view.HelloPanel"/>
+						<core:Fragment fragmentName="sapui5.view.Form01" type="XML"/>
 					</content>
 				</Page>
 			</pages>

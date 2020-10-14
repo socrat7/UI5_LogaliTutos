@@ -14,7 +14,16 @@ sap.ui.define([
 			//el método onInit se inicia siempre al instanciar
 			onInit: function () {
 
+			},
+			
+			//reutilizamos el boton para abrir el dialogo
+			onOpenDialog: function () {
+				
+				//llamamos la funcion del Component.js
+				this.getOwnerComponent().openHelloDialog();
+			
 			}
+			
 		});
 
 	});
