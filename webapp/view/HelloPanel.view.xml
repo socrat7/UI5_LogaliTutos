@@ -1,4 +1,4 @@
-<mvc:View controllerName="sapui5.controller.HelloPanel" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View controllerName="sapui5.controller.HelloPanel" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
 	<Panel headerText="{i18n>healloPanelTitle}" class="sapUIResponsiveMargin myCustomCss" width="auto">
 		<content>
 			<Button text="{i18n>showHelloButtonText}" press=".onShowHello" type="Unstyled" class="sapUiSmallMargin myCustomButton "/>
@@ -6,4 +6,5 @@
 			<Text text="Hello {/recipient/name}" class="sapUiSmallMargin myCustomText sapTheminglight-asColor"/>
 		</content>
 	</Panel>
+	<core:Fragment fragmentName="sapui5.view.Form01" type="XML" />
 </mvc:View>
