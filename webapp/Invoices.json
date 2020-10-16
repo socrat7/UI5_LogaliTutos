@@ -16,7 +16,7 @@
 			"ExtendedPrice" : 10.2000,
 			"ShipperName" : "Func Inc",
 			"ShipperDate" : "2015-04-01T00:00:00",
-			"Status" : "A"
+			"Status" : "B"
 			
 		},
 		{
@@ -25,7 +25,7 @@
 			"ExtendedPrice" : 12.2000,
 			"ShipperName" : "Func Inc",
 			"ShipperDate" : "2015-04-01T00:00:00",
-			"Status" : "A"
+			"Status" : "C"
 			
 		},
 		{
