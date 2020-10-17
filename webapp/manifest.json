@@ -8,7 +8,17 @@
 			"version": "1.0.0"
 		},
 		"title": "{{appTitle}}",
-		"description": "{{appDescription}}"
+		"description": "{{appDescription}}",
+
+		"dataSources": {
+			"remoteData": {
+				"uri": "/destinations/northwind/V2/Northwind/Northwind.svc",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
 
 	},
 
@@ -55,10 +65,10 @@
 					"bundleName": "sapui5.i18n.i18n"
 				}
 			},
-			
-			"invoice" : {
-				 "type" : "sap.ui.model.json.JSONModel",
-				 "uri"  : "Invoices.json"
+
+			"invoice": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"dataSource": "remoteData"
 			}
 		},
 		"resources": {

@@ -29,7 +29,7 @@
 		<!-- toolbar end    -->
 		
 		<items>
-			<ObjectListItem title="{invoice>Quantity} x {invoice>Productname}"
+			<ObjectListItem title="{invoice>Quantity} x {invoice>ProductName}"
 			
 				number = "{ 
 						parts: [{path: 'invoice>ExtendedPrice' }, {path: 'view>/currency'} ],
