@@ -20,10 +20,10 @@
 			
 		},
 		{
-			"Productname" : "HDD - DELL",
+			"Productname" : "HDD - Dell",
 			"Quantity" : 5,
 			"ExtendedPrice" : 12.2000,
-			"ShipperName" : "Func Inc",
+			"ShipperName" : "Acme",
 			"ShipperDate" : "2015-04-01T00:00:00",
 			"Status" : "C"
 			
@@ -32,7 +32,7 @@
 			"Productname" : "HDD - ASUS",
 			"Quantity" : 8,
 			"ExtendedPrice" : 200.2000,
-			"ShipperName" : "Func Inc",
+			"ShipperName" : "Acme",
 			"ShipperDate" : "2015-04-01T00:00:00",
 			"Status" : "A"
 			

@@ -3,14 +3,17 @@
 	xmlns="sap.m" 
 	xmlns:mvc="sap.ui.core.mvc">
 	
-	<!-- en items agregamos los elementos y ponemos un order by Productname -->
+	<!--  en items cargamos los datos y ponemos un group by ShipperName -->
 	<List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" 
 	
 	items="{
 		path: 'invoice>/Invoices',
 		sorter : {
-					path: 'Productname'
+					path: 'ShipperName',
+					group: true
 				 }
+
+		
 		}">
 		
 		<!-- toolbar start : para el filtro   -->
