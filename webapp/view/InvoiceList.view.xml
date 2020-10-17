@@ -2,7 +2,16 @@
 	controllerName = "sapui5.controller.InvoiceList"
 	xmlns="sap.m" 
 	xmlns:mvc="sap.ui.core.mvc">
-	<List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{invoice>/Invoices}">
+	
+	<!-- en items agregamos los elementos y ponemos un order by Productname -->
+	<List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" 
+	
+	items="{
+		path: 'invoice>/Invoices',
+		sorter : {
+					path: 'Productname'
+				 }
+		}">
 		
 		<!-- toolbar start : para el filtro   -->
 		
