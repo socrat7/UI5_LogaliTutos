@@ -38,6 +38,9 @@ sap.ui.define([
 			//cargamos el controlador para el mensaje de dialogo
 			//accedemos a la logica de HelloDialog.js
 			this._helloDialog = new HelloDialog(this.getRootControl());
+			
+			//create the views based on the url/hash
+			this.getRouter().initialize();
 
 		},
 

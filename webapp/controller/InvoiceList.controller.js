@@ -30,7 +30,7 @@ sap.ui.define([
 			var sQuery = oEvent.getParameter("query");
 
 			if (sQuery) {
-				aFilter.push(new Filter("Productname", FilterOperater.Contains, sQuery));
+				aFilter.push(new Filter("ProductName", FilterOperater.Contains, sQuery));
 			}
 
 			//si tenemos el filtro como verdadero y ya capturado
@@ -41,6 +41,16 @@ sap.ui.define([
 
 			oBinding.filter(aFilter);
 
+		},
+		
+		onPress : function(oEvent){
+			
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			
+			oRouter.navTo("detail");
+			
+			
+			
 		}
 
 	});
