@@ -1,28 +1,14 @@
-<mvc:View controllerName="sapui5.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
-
-
-
-	<Page title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress=".onNavBack" >
+<mvc:View controllerName="sapui5.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	xmlns:lp="sapui5.control"
+	>
+	
+	<Page title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress=".onNavBack">
 		<content>
 			<ObjectHeader title="{invoice>ProductName}"></ObjectHeader>
+			<lp:ProductRating id="rating" class="sapUiSmallMargingBeginEnd" change=".onRatingChange" />
+				
+		
 		</content>
 	</Page>
-
-	<!--
-	<Page showHeader="false">
-		<Bar design="Header">
-			<contentLeft>
-				<core:Icon src="sap-icon://nav-back" color="Positive" press=".onNavBack" />
-			</contentLeft>
-			<contentMiddle>
-				<Title text="{i18n>detailPageTitle}" />
-			</contentMiddle>
-		</Bar>
-		<content>
-			<ObjectHeader title="{invoice>ProductName}"></ObjectHeader>
-		</content>
-	</Page>
--->
-
-
+	
 </mvc:View>

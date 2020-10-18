@@ -4,17 +4,34 @@
 }
 
 .myCustomCss .myCustomButton {
-    background-color: #3f5161;
-    color: white;
-    text-align: center;
-    opacity: 0.6;
-    transition: 0.3s;
     display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
     cursor: pointer;
-    margin: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #3f5161;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
 .myCustomCss .myCustomButton:hover {
-    opacity: 1;
-    background-color: black;
+    background-color: #f4511e
+}
+
+.myCustomCss .myCustomButton:active {
+    background-color: #f4511e;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.productRating{
+	padding: 0.75rem;
+}
+
+.productRating .sapMRI{
+	vertical-align: initial;
 }
