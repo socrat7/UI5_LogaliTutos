@@ -86,9 +86,14 @@
 				"name": "overview",
 				"target": "overview"
 			}, {
-				"pattern": "detail",
+			
+			
+				"__comment": "agregamos el id que definimos {invoicePath} para que la segunda vista tenga la posibilidad de decodificar la info que se le pasa",
+				"pattern": "detail/{invoicePath}", 
 				"name": "detail",
 				"target": "detail"
+				
+				
 
 			}],
 
