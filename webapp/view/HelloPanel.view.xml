@@ -2,8 +2,10 @@
 	<Panel headerText="{i18n>healloPanelTitle}" class="sapUIResponsiveMargin myCustomCss" width="auto" expandable="{device>/system/phone}"
 		expanded="{= !${device>/system/phone} }">
 		<content>
-			<Button id="helloDialogButton" icon="sap-icon://globe" text="{i18n>openDialogButtonText}" press=".onOpenDialog" class="sapUiSmallMargin "/>
-			<Button text="{i18n>showHelloButtonText}" press=".onShowHello" type="Unstyled" class="sapUiSmallMargin myCustomButton "/>
+			<!-- con css, debe aparecer solo en escitorio : sapUiVisibleOnlyDesktop-->
+			<Button id="helloDialogButton" icon="sap-icon://globe" text="{i18n>openDialogButtonText}" press=".onOpenDialog" class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
+			<!-- con css, debe aparecer en todos los equipos menos escitorio-->
+			<Button text="{i18n>showHelloButtonText}" press=".onShowHello" type="Unstyled" class="sapUiSmallMargin myCustomButton sapUiHideOnDesktop "/>
 			<Input value="{/recipient/name}" valueLiveUpdate="true" width="60%"/>
 			<Text text="Hello {/recipient/name}" class="sapUiSmallMargin myCustomText sapTheminglight-asColor"/>
 		</content>
