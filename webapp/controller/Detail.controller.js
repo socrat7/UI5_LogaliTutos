@@ -3,10 +3,11 @@ sap.ui.define([
 		"sap/ui/core/mvc/Controller", //asignamos el controller
 		"sap/ui/core/routing/History", //agregamos el historial para la navegacion entre vistas, por ejemplo back
 		"sap/ui/core/UIComponent",
-		"sap/m/MessageToast"
+		"sap/m/MessageToast",
+		"sap/ui/model/json/JSONModel"
 
 	],
-	function (Controller, History, UIComponent, MessageToast) { //se paso al Component.js: models, ResourceModel
+	function (Controller, History, UIComponent, MessageToast, JSONModel) { //se paso al Component.js: models, ResourceModel
 
 		"use strict"; //se especifica que es la zona privada del controlador
 
@@ -18,6 +19,9 @@ sap.ui.define([
 
 				//obtenbemos la ruta
 				oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+
+				this.getView().setModel(new JSONModel({currency: "EUR"}), "view");
+				
 			},
 
 			_onObjectMatched: function (oEvent) {
